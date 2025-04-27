@@ -7,7 +7,7 @@ import mongodb from "../../assets/mongodb-svgrepo-com.svg"
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import Speech from './Speech'
-import certificate from "../../assets/10K.png"
+import certificate from "../../assets/certificate.png"
 import mypic from "../../assets/suitpic1.png"
 import { motion } from "motion/react"
 import Shape from './Shape'
