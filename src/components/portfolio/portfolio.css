@@ -1,0 +1,80 @@
+/* Main wrapper for the portfolio */
+.portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #12071f,#2f204e);
+  box-sizing: border-box;
+}
+
+/* Portfolio Grid */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual Card */
+.pCard {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* Image Section */
+.pCardImg {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.pCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Section */
+.pCardText {
+  padding: 20px;
+  text-align: center;
+}
+
+.pCardText h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.pCardText p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Button */
+.pCardText button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pCardText button:hover {
+  background-color: #45a049;
+}
