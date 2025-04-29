@@ -35,7 +35,7 @@
 /* Image Section */
 .pCardImg {
   width: 100%;
-  height: 60%;
+  height: fit-content;
   overflow: hidden;
 }
 

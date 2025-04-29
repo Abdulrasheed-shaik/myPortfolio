@@ -1,14 +1,14 @@
 import React, { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion"; // Important to add useInView!
+import { motion, useInView } from "framer-motion"; 
 import "./portfolio.css"; 
 import clickzap from "../../assets/clickzap.png"; 
+import nutrifruit from "../../assets/nutrifruit.png";
+import portfolio from "../../assets/portfolio.png"; 
 
 const items = [
-  { id: 1, img: clickzap, title: "Full Stack Blog Application", desc: "Project description here.", link: "/" },
-  { id: 2, img: clickzap, title: "School Management System", desc: "Project description here.", link: "/" },
-  { id: 3, img: clickzap, title: "Real-time Chat Application", desc: "Project description here.", link: "/" },
-  { id: 4, img: clickzap, title: "Social Media Project", desc: "Project description here.", link: "/" },
-  { id: 5, img: clickzap, title: "Animated Portfolio Website", desc: "Project description here.", link: "/" },
+  { id: 1, img: clickzap, title: "ClickZap", desc: "ClickZap is a social media platform with real-time chat, media uploads, interactive engagement, notifications, and secure authentication.", link: "https://clickzap-1.onrender.com/login" },
+  { id: 2, img: nutrifruit, title: "NutriFruit", desc: "NutriFruit is an e-commerce platform for fruits and related products, featuring Google signup, Razorpay payments, product search, cart management, and QR code access.", link: "https://abdulrasheed-shaik.github.io/NUTRIFRUIT/index.html" },
+  { id: 5, img: portfolio, title: "Animated Portfolio Website", desc: "A React app featuring dynamic animations with Framer Motion, immersive 3D elements using Three.js, and EmailJS integration for seamless email notifications.", link: "https://my-portfolio-six-mu-65.vercel.app/" },
 ];
 
 // Variants for list and card animation

@@ -3,22 +3,22 @@ import { useEffect, useRef, useState } from "react";
 
 const Counter = ({ from, to, text }) => {
   const [count, setCount] = useState(from);
-
   const ref = useRef();
-
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true }); // Ensure animation happens only once
 
   useEffect(() => {
+    if (!isInView) return;
+
     const animation = animate(from, to, {
       duration: 4,
       ease: "easeOut",
-      onUpdate: (prev) => {
-        setCount(Math.floor(prev));
+      onUpdate: (latest) => {
+        setCount(Math.floor(latest)); // Update counter on every animation step
       },
     });
 
-    return () => animation.cancel();
-  }, [isInView, from, to]);
+    return () => animation.cancel(); // Cleanup the animation on component unmount or view change
+  }, [isInView, from, to]); // Only trigger animation when in view
 
   return (
     <div className="counter" ref={ref}>

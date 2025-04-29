@@ -1,15 +1,13 @@
-import React, { useRef, useState } from 'react'
-import "./services.css"
-
+import React, { useRef, useState } from 'react';
+import "./services.css";
 import { motion, useInView } from "motion/react";
-import webDevelper from "../../assets/web-developer.png"
-import frontend from "../../assets/frontend.png"
-import backend from "../../assets/backend.png"
+import webDevelper from "../../assets/web-developer.png";
+import frontend from "../../assets/frontend.png";
+import backend from "../../assets/backend.png";
 import Counter from './Counter';
 import ComputerModelContainer from './computer/ComputerModelContainer';
 import ProgrammerContainer from './programmer/ProgrammerContainer';
 import DesktopContainer from './desktop/DesktopContainer';
-
 
 const textVariants = {
   initial: { x: -100, y: -100, opacity: 0 },
@@ -28,24 +26,9 @@ const listVariants = {
 };
 
 const services = [
-  {
-    id: 1,
-    img: webDevelper,
-    title: "Full-Stack Development",
-    counter: 1,
-  },
-  {
-    id: 2,
-    img: frontend,
-    title: "Frontend Development",
-    counter: 3,
-  },
-  {
-    id: 3,
-    img: backend,
-    title: "Backend Development",
-    counter: 2,
-  },
+  { id: 1, img: webDevelper, title: "Full-Stack Development", counter: 1 },
+  { id: 2, img: frontend, title: "Frontend Development", counter: 3 },
+  { id: 3, img: backend, title: "Backend Development", counter: 2 },
 ];
 
 const Services = () => {
@@ -94,15 +77,13 @@ const Services = () => {
       </div>
 
       <div className="sSection right">
-      {currentServiceId === 1 ? (
+        {currentServiceId === 1 ? (
           <ComputerModelContainer />
         ) : currentServiceId === 2 ? (
           <ProgrammerContainer />
         ) : (
           <DesktopContainer />
         )}
-        
-        
       </div>
     </div>
   );
